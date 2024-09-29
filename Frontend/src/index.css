@@ -1,0 +1,1200 @@
+.search{
+  
+    top:6px;
+    left:10px;
+  }
+  
+  .form-control{
+      
+      border:none;
+      padding-left:32px;
+  }
+  
+  .form-control:focus{
+      
+      border:none;
+      box-shadow:none;
+  }
+  
+  .green{
+      
+      color:green;
+  }
+
+  body{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.schedule-table table thead tr {
+    background: #86d4f5;
+    }
+    .schedule-table table thead th {
+    padding: 25px 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
+    border: 0;
+    }
+    .schedule-table table thead th:before {
+    content: "";
+    width: 3px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+    .schedule-table table thead th.last:before {
+    content: none;
+    }
+    .schedule-table table tbody td {
+    vertical-align: middle;
+    border: 1px solid #e2edf8;
+    font-weight: 500;
+    padding: 30px;
+    text-align: center;
+    }
+    .schedule-table table tbody td.day {
+    font-size: 22px;
+    font-weight: 600;
+    background: #f0f1f3;
+    border: 1px solid #e4e4e4;
+    position: relative;
+    transition: all 0.3s linear 0s;
+    min-width: 165px;
+    }
+    .schedule-table table tbody td.active {
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s linear 0s;
+    min-width: 165px;
+    }
+    .schedule-table table tbody td.active h4 {
+    font-weight: 700;
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 5px;
+    }
+    .schedule-table table tbody td.active p {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 0;
+    }
+    .schedule-table table tbody td .hover h4 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    }
+    .schedule-table table tbody td .hover p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    line-height: normal;
+    }
+    .schedule-table table tbody td .hover span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    }
+    .schedule-table table tbody td.active::before {
+    position: absolute;
+    content: "";
+    min-width: 100%;
+    min-height: 100%;
+    transform: scale(0);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: all 0.3s linear 0s;
+    }
+    .schedule-table table tbody td .hover {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: 99;
+    background: #86d4f5;
+    border-radius: 0.25rem;
+    padding: 25px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+    }
+    .schedule-table table tbody td.active:hover .hover {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    opacity: 1;
+    }
+    .schedule-table table tbody td.day:hover {
+    background: #86d4f5;
+    color: #fff;
+    border: 1px solid #86d4f5;
+    }
+    @media screen and (max-width: 1199px) {
+    .schedule-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    }
+    .schedule-table table thead th {
+    padding: 25px 40px;
+    }
+    .schedule-table table tbody td {
+    padding: 20px;
+    }
+    .schedule-table table tbody td.active h4 {
+    font-size: 18px;
+    }
+    .schedule-table table tbody td.active p {
+    font-size: 15px;
+    }
+    .schedule-table table tbody td.day {
+    font-size: 20px;
+    }
+    .schedule-table table tbody td .hover {
+    padding: 15px 0;
+    }
+    .schedule-table table tbody td .hover span {
+    font-size: 17px;
+    }
+    }
+    @media screen and (max-width: 991px) {
+    .schedule-table table thead th {
+    font-size: 18px;
+    padding: 20px;
+    }
+    .schedule-table table tbody td.day {
+    font-size: 18px;
+    }
+    .schedule-table table tbody td.active h4 {
+    font-size: 17px;
+    }
+    }
+    @media screen and (max-width: 767px) {
+    .schedule-table table thead th {
+    padding: 15px;
+    }
+    .schedule-table table tbody td {
+    padding: 15px;
+    }
+    .schedule-table table tbody td.active h4 {
+    font-size: 16px;
+    }
+    .schedule-table table tbody td.active p {
+    font-size: 14px;
+    }
+    .schedule-table table tbody td .hover {
+    padding: 10px 0;
+    }
+    .schedule-table table tbody td.day {
+    font-size: 18px;
+
+    }
+    .schedule-table table tbody td .hover span {
+    font-size: 15px;
+    }
+    }
+    @media screen and (max-width: 575px) {
+    .schedule-table table tbody td.day {
+    min-width: 135px;
+    }
+    }
+    .schedule-table{
+        overflow-y: auto;
+    }
+
+    .section-title {
+        position: relative;
+    }
+    .section-title h2 {
+        color: #1d2025;
+        position: relative;
+        margin: 0;
+        font-size: 24px;
+    }
+    @media (min-width: 768px) {
+        .section-title h2 {
+            font-size: 28px;
+        }
+    }
+    @media (min-width: 992px) {
+        .section-title h2 {
+            font-size: 34px;
+        }
+    }
+    .section-title.title-ex1 h2 {
+        padding-bottom: 20px;
+    }
+    @media (min-width: 768px) {
+        .section-title.title-ex1 h2 {
+            padding-bottom: 30px;
+        }
+    }
+    @media (min-width: 992px) {
+        .section-title.title-ex1 h2 {
+            padding-bottom: 40px;
+        }
+    }
+    .section-title.title-ex1 h2:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 12px;
+        width: 110px;
+        height: 1px;
+        background-color: #d6dbe2;
+    }
+    @media (min-width: 768px) {
+        .section-title.title-ex1 h2:before {
+            bottom: 17px;
+        }
+    }
+    @media (min-width: 992px) {
+        .section-title.title-ex1 h2:before {
+            bottom: 25px;
+        }
+    }
+    .section-title.title-ex1 h2:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 12px;
+        width: 40px;
+        height: 1px;
+        background-color: #0cc652;
+    }
+    @media (min-width: 768px) {
+        .section-title.title-ex1 h2:after {
+            bottom: 17px;
+        }
+    }
+    @media (min-width: 992px) {
+        .section-title.title-ex1 h2:after {
+            bottom: 25px;
+        }
+    }
+    .section-title.title-ex1.text-center h2:before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .section-title.title-ex1.text-center h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .section-title.title-ex1.text-right h2:before {
+        left: auto;
+        right: 0;
+    }
+    .section-title.title-ex1.text-right h2:after {
+        left: auto;
+        right: 0;
+    }
+    .section-title.title-ex1 p {
+        font-family: "Montserrat", sans-serif;
+        color: #8b8e93;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    
+    .price-card {
+        background: #f5f5f6;
+        padding: 40px 35px;
+        position: relative;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+    .price-card:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: -35px;
+        width: 88px;
+        height: 88px;
+        background: #0cc652;
+        opacity: 0.2;
+        border-radius: 8px;
+        transform: rotate(45deg);
+    }
+    .price-card:after {
+        position: absolute;
+        content: "";
+        top: 30px;
+        right: -35px;
+        width: 88px;
+        height: 88px;
+        background: #0cc652;
+        opacity: 0.2;
+        border-radius: 8px;
+        transform: rotate(45deg);
+    }
+    .price-card h2 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .price-card .btn {
+        font-size: 20px;
+        border-radius: 100px;
+        padding-top: 5px;
+        border: 0;
+        color: #fff;
+        float: right;
+    }
+    .price-card .btn.btn-primary {
+        border: 0 !important;
+    }
+    .price-card.featured {
+        background: #fff;
+        border: 1px solid #ebebeb;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    .price-card:hover .btn {
+        background: #0cc652;
+        border-color: #0cc652;
+    }
+    p.price span {
+        display: inline-block;
+        padding: 45px 15px 50px;
+        padding-right: 0;
+        font-size: 50px;
+        font-weight: 600;
+        color: #0cc652;
+        position: relative;
+    }
+    p.price span:before {
+        position: absolute;
+        font-size: 16px;
+        top: 25px;
+        font-weight: 300;
+        left: 0;
+    }
+    .pricing-offers {
+        padding: 0 0 10px;
+    }
+    .pricing-offers li {
+        padding: 0 0 16px;
+        line-height: 18px;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    .btn.btn-mid {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+    }
+    header {
+        position:relative;
+        left:0;
+        top:0;
+        width:100%;
+        min-height:120px;
+        padding:50px 0;
+        color:#fff;
+            background: #383838 url(https://www.athenadesignstudio.com/plugins/switch/images/bg.jpg) no-repeat center center;
+        margin-bottom:30px
+    }
+    
+    /* Logo */
+    header .logo {
+        clear:both;
+        display:block;
+        text-align:center;
+        padding-bottom:10px;
+    }
+    
+    /* Title */
+    header h1 {
+        font-weight:300;
+        font-size:24px;
+        color:#eee;	
+        letter-spacing:2px;
+        text-align:center;
+        text-transform:uppercase;
+        margin:0 !important;
+        padding-bottom:25px;
+    }
+   
+   
+    a {
+        font-family: "Open Sans";
+        margin: 0px;
+    }
+    
+    a,
+    a:hover,
+    a:focus {
+        color: inherit;
+    }
+    
+    body {
+        background-color: #F1F2F3;
+    }
+    
+    .container-fluid,
+    .container {
+        max-width: 1200px;
+    }
+    
+    .card-container {
+        padding: 100px 0px;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+    }
+    
+    .profile-card-1 {
+        background-color: #FFF;
+        border-radius: 10px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        background-position: center;
+        padding-top: 100px;
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        max-width: 300px;
+    }
+    
+    .profile-card-1 .profile-content {
+        position: relative;
+        background-color: #FFF;
+        padding: 70px 20px 20px 20px;
+        text-align: center;
+    }
+    
+    .profile-card-1 .profile-img {
+        position: absolute;
+        height: 100px;
+        left: 0px;
+        right: 0px;
+        z-index: 10;
+        top: -50px;
+        transition: all 0.25s linear;
+        transform-style: preserve-3d;
+    }
+    
+    .profile-card-1 .profile-img img {
+        height: 100px;
+        margin: auto;
+        border-radius: 50%;
+        border: 5px solid #FFF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .profile-card-1 .profile-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #021830;
+    }
+    
+    .profile-card-1 .profile-address {
+        color: #777;
+        font-size: 12px;
+        margin: 0px 0px 15px 0px;
+    }
+    
+    .profile-card-1 .profile-description {
+        font-size: 13px;
+        padding: 5px 10px;
+        color: #777;
+    }
+    
+    .profile-card-1 .profile-icons .fa {
+        margin: 5px;
+        color: #777;
+    }
+    
+    .profile-card-1:hover {
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    }
+    
+    .profile-card-1:hover .profile-img {
+        transform: rotateY(180deg);
+    }
+    
+    .profile-card-2 {
+        max-width: 300px;
+        background-color: #FFF;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    
+    .profile-card-2 img {
+        transition: all linear 0.25s;
+    }
+    
+    .profile-card-2 .profile-name {
+        position: absolute;
+        left: 30px;
+        bottom: 70px;
+        font-size: 30px;
+        color: #FFF;
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+        transition: all linear 0.25s;
+    }
+    
+    .profile-card-2 .profile-icons {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        color: #FFF;
+        transition: all linear 0.25s;
+    }
+    
+    .profile-card-2 .profile-username {
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        color: #FFF;
+        font-size: 13px;
+        transition: all linear 0.25s;
+    }
+    
+    .profile-card-2 .profile-icons .fa {
+        margin: 5px;
+    }
+    
+    .profile-card-2:hover img {
+        filter: grayscale(100%);
+    }
+    
+    .profile-card-2:hover .profile-name {
+        bottom: 80px;
+    }
+    
+    .profile-card-2:hover .profile-username {
+        bottom: 60px;
+    }
+    
+    .profile-card-2:hover .profile-icons {
+        right: 40px;
+    }
+    
+    .profile-card-3 {
+        background-color: #FFF;
+        border-radius: 5px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        padding: 25px 15px;
+    }
+    
+    .profile-card-3 .profile-name {
+        font-weight: bold;
+        color: #21304e;
+    }
+    
+    .profile-card-3 .profile-location {
+        color: #999;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    
+    .profile-card-3 img {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        margin: 10px auto;
+        border-radius: 50%;
+        transition: all linear 0.25s;
+    }
+    
+    .profile-card-3 .profile-description {
+        font-size: 13px;
+        color: #777;
+        padding: 10px;
+    }
+    
+    .profile-card-3 .profile-icons {
+        margin: 15px 0px;
+    }
+    
+    .profile-card-3 .profile-icons .fa {
+        color: #fe455a;
+        margin: 0px 5px;
+    }
+    
+    .profile-card-3:hover img {
+        height: 110px;
+        width: 110px;
+        margin: 5px auto;
+    }
+    
+    .profile-card-4 {
+        max-width: 300px;
+        background-color: #FFF;
+        border-radius: 5px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+    }
+    
+    .profile-card-4 img {
+        transition: all 0.25s linear;
+    }
+    
+    .profile-card-4 .profile-content {
+        position: relative;
+        padding: 15px;
+        background-color: #FFF;
+    }
+    
+    .profile-card-4 .profile-name {
+        font-weight: bold;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: -70px;
+        color: #FFF;
+        font-size: 17px;
+    }
+    
+    .profile-card-4 .profile-name p {
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+    
+    .profile-card-4 .profile-description {
+        color: #777;
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    .profile-card-4 .profile-overview {
+        padding: 15px 0px;
+    }
+    
+    .profile-card-4 .profile-overview p {
+        font-size: 10px;
+        font-weight: 600;
+        color: #777;
+    }
+    
+    .profile-card-4 .profile-overview h4 {
+        color: #273751;
+        font-weight: bold;
+    }
+    
+    .profile-card-4 .profile-content::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        top: -10px;
+        left: 0px;
+        right: 0px;
+        background-color: #FFF;
+        z-index: 0;
+        transform: skewY(3deg);
+    }
+    
+    .profile-card-4:hover img {
+        transform: rotate(5deg) scale(1.1, 1.1);
+        filter: brightness(110%);
+    }
+    
+    .profile-card-5 {
+        max-width: 300px;
+        background-color: #FFF;
+        border-radius: 5px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        padding: 50px 15px 25px 15px;
+    }
+    
+    .profile-card-5 img {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        margin: 10px auto;
+        border-radius: 50%;
+        transition: all linear 0.25s;
+        position: relative;
+    }
+    
+    .profile-card-5::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: 0px;
+        left: 0px;
+        height: 170px;
+        background-color: #4fb96e;
+        transform: skewY(-20deg);
+    }
+    
+    .profile-card-5 .profile-name {
+        padding-top: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .profile-card-5 .profile-designation {
+        font-size: 13px;
+        color: #777;
+    }
+    
+    .profile-card-3 .profile-location {
+        color: #999;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    
+    .profile-card-5 .profile-description {
+        font-size: 13px;
+        color: #777;
+        padding: 10px;
+    }
+    
+    .profile-card-5 .profile-overview {
+        padding: 15px 0px;
+    }
+    
+    .profile-card-5 .profile-overview p {
+        color: #777;
+        font-size: 13px;
+    }
+    
+    .profile-card-5 .profile-overview h2 {
+        font-weight: bold;
+        color: #1e2832;
+    }
+    
+    .profile-card-5 .profile-icons .fa {
+        margin: 7px;
+        color: #4fb96e;
+    }
+    
+    .profile-card-5:hover img {
+        transform: rotate(-5deg);
+    }
+    
+    .profile-card-6 {
+        max-width: 300px;
+        background-color: #FFF;
+        border-radius: 5px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+    
+    .profile-card-7 {
+        background-color: #FFF;
+        border-radius: 5px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+    }
+    
+    .profile-card-7 .profile-content {
+        padding: 60px 30px 30px 30px;
+        background-color: #FFF;
+        position: relative;
+    }
+    
+    .profile-card-7 .profile-content img {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        top: -40px;
+        border: 5px solid #FFF;
+    }
+    
+    .profile-card-7 .profile-content .profile-name {
+        position: absolute;
+        font-size: 17px;
+        font-weight: bold;
+        top: -35px;
+        left: 125px;
+        color: #FFF;
+    }
+    
+    .profile-card-7 .profile-overview {
+        padding: 5px 0px;
+    }
+    
+    .profile-card-7 .profile-overview p {
+        color: #777;
+        font-size: 11px;
+        font-weight: 600;
+    }
+    
+    .profile-card-7 .profile-overview h5 {
+        color: #142437;
+        font-weight: bold;
+    }
+    
+    .profile-card-8 {
+        background: linear-gradient(#09121c, #36445a);
+        border-radius: 5px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        transition: all 0.25s linear;
+    }
+    
+    .profile-card-8 .profile-name {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 25px;
+        color: #58d683;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    
+    .profile-card-8 .profile-designation {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 50px;
+        color: #FFF;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .profile-card-8 .profile-icons {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 80px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .profile-card-8 .profile-icons .fa {
+        margin: 5px;
+    }
+    
+    .profile-card-8:hover {
+        transform: scale(1.05, 1.05);
+    }
+    
+    .profile-card-9 {
+        border-radius: 10px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        padding: 30px 15px;
+        background-color: #FFF;
+        transition: all 0.25s linear;
+    }
+    
+    .profile-card-9 img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        margin: 10px auto;
+    }
+    
+    .profile-card-9 .profile-name {
+        font-size: 15px;
+        color: #3249b9;
+        font-weight: 600;
+    }
+    
+    .profile-card-9 .profile-designation {
+        font-size: 13px;
+        color: #777;
+    }
+    
+    .profile-card-9 .profile-description {
+        padding: 10px;
+        font-size: 13px;
+        color: #777;
+        margin: 15px 0px;
+        background-color: #F1F2F3;
+        border-radius: 5px;
+    }
+    
+    .profile-card-9 a {
+        padding: 10px 15px;
+        background-color: #3249b9;
+        color: #FFF;
+        font-size: 11px;
+        border-radius: 25px;
+    }
+    
+    .profile-card-9:hover {
+        transform: scale(1.05, 1.05);
+    }
+    
+    .profile-card-10 {
+        border-radius: 5px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        padding: 30px 15px;
+        background-color: #1f2124;
+        color: #EEE;
+    }
+    
+    .profile-card-10 img {
+        margin: 10px auto;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        box-shadow: 0px 0px 0px 2px #64c17b;
+        transition: all 0.25s linear;
+    }
+    
+    .profile-card-10 .profile-name {
+        color: #FFF;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    
+    .profile-card-10 .profile-location {
+        font-size: 13px;
+        opacity: 0.7;
+    }
+    
+    .profile-card-10 .profile-description {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .profile-card-10 .profile-icons .fa {
+        color: #ffc75e;
+        margin: 10px;
+    }
+    
+    .profile-card-10:hover img {
+        transform: scale(1.1);
+    }
+
+    .bg-gradient {
+        background: #C9D6FF;
+        background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF); 
+        background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+        } 
+        ul li {
+          margin-bottom:1.4rem;
+        }
+        .pricing-divider {
+        border-radius: 20px;
+        background: #C64545;
+        padding: 1em 0 4em;
+        position: relative;
+        }
+        .blue .pricing-divider{
+        background: #2D5772; 
+        }
+        .green .pricing-divider {
+        background: #1AA85C; 
+        }
+        .red b {
+          color:#C64545
+        }
+        .blue b {
+          color:#2D5772
+        }
+        .green b {
+          color:#1AA85C
+        }
+        .pricing-divider-img {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+        }
+        .deco-layer {
+            -webkit-transition: -webkit-transform 0.5s;
+            transition: transform 0.5s;
+        }
+        .btn-custom  {
+          background:#C64545; color:#fff; border-radius:20px
+        }
+        
+        .img-float {
+          width:50px; position:absolute;top:-3.5rem;right:1rem
+        }
+        
+        .princing-item {
+          transition: all 150ms ease-out;
+        }
+        .princing-item:hover {
+          transform: scale(1.05);
+        }
+        .princing-item:hover .deco-layer--1 {
+          -webkit-transform: translate3d(15px, 0, 0);
+          transform: translate3d(15px, 0, 0);
+        }
+        .princing-item:hover .deco-layer--2 {
+          -webkit-transform: translate3d(-15px, 0, 0);
+          transform: translate3d(-15px, 0, 0);
+        }
+
+        .excard {
+            background-color: #fff;
+            border-radius: 10px;
+            border: none;
+            position: relative;
+            margin-bottom: 30px;
+            box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+        }
+        .l-bg-cherry {
+            background: linear-gradient(to right, #493240, #f09) !important;
+            color: #fff;
+        }
+        
+        .l-bg-blue-dark {
+            background: linear-gradient(to right, #373b44, #4286f4) !important;
+            color: #fff;
+        }
+        
+        .l-bg-green-dark {
+            background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+            color: #fff;
+        }
+        
+        .l-bg-orange-dark {
+            background: linear-gradient(to right, #a86008, #ffba56) !important;
+            color: #fff;
+        }
+        
+        .excard .excard-statistic-3 .excard-icon-large .fas, .excard .excard-statistic-3 .excard-icon-large .far, .excard .excard-statistic-3 .excard-icon-large .fab, .excard .excard-statistic-3 .excard-icon-large .fal {
+            font-size: 110px;
+        }
+        
+        .excard .excard-statistic-3 .excard-icon {
+            text-align: center;
+            line-height: 50px;
+            margin-left: 15px;
+            color: #000;
+            position: absolute;
+            right: -5px;
+            top: 20px;
+            opacity: 0.1;
+        }
+        
+        .l-bg-cyan {
+            background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+            color: #fff;
+        }
+        
+        .l-bg-green {
+            background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+            color: #fff;
+        }
+        
+        .l-bg-orange {
+            background: linear-gradient(to right, #f9900e, #ffba56) !important;
+            color: #fff;
+        }
+        
+        .l-bg-cyan {
+            background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+            color: #fff;
+        }
+.classbutton{
+    font-size: 150px;
+}
+.total{
+    font-size: 30px;
+     color: red;
+     font-weight: 400;
+     font-family: Arial, Helvetica, sans-serif;
+}
+.custom-left{
+    margin-left: 60px;
+}
+.custom-right{
+    margin-right: 35px;
+}
+.mga{
+    margin-left: 200px;
+}
