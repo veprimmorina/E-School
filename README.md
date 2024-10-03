@@ -1,10 +1,10 @@
 # E-School
+Technologies: C#, ASP.NET, MSSQL, ReactJs
+
 The application comprises three main modules, each contributing to the overall functionality of the system.
 
 The first module integrates Open Educational Resources (OER) with Moodle, functioning as a management system that provides educational materials and features related to course activities. The second module operates as an attachment system within Moodle, utilizing data about subjects, students, and academic years. This module facilitates administrative management, including grade entry by teachers, class monitoring, and tracking student details such as attendance, comments, and grades.
-
 The final module incorporates machine learning to predict student academic decline. By analyzing data from Moodle—such as completed assignments, interactions with OER, grades, and attendance—the system generates detailed predictions, which are then communicated back to the user interface.
-
 The following chapters elaborate on the features and functionalities achieved through the integration of these three modules.
 
 Three main roles are: Administrator, Teacher, Student
@@ -33,3 +33,7 @@ The educator is the other important role within the system. This role is defined
 Educators have the opportunity to see in the same way the prediction of those students if they will fail or not.
 
 ![image](https://github.com/user-attachments/assets/0619f748-99ba-4cb0-86eb-8fc5652c4cf6)
+
+Students can also view their schedule for the entire week. This part, which is managed by the administration, can also be seen by students. Considering the class in which that student is, the schedule for him is displayed in the format of the table with the corresponding days and hours
+
+![image](https://github.com/user-attachments/assets/bafa00cc-e1b1-4074-a842-e83b8d953f22)
