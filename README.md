@@ -1,6 +1,6 @@
 # E-School
 
-**Technologies:** C#, ASP.NET, MSSQL, ReactJs
+**Technologies:** C#, ASP.NET, ML.NET MSSQL, ReactJs
 
 The application comprises three main modules, each contributing to the overall functionality of the system.
 
