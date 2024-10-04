@@ -1,6 +1,5 @@
 ﻿using Dapper;
 using Master.Core.DTO;
-using Master.Core.Wrappers;
 using Master.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using MySql.Data.MySqlClient;
@@ -10,12 +9,10 @@ namespace Master.Data.Repositories
 {
     public class AdministrationRepository : IAdministrationRepository
     {
-        private readonly ApplicationDbContext _dbContext;
         private readonly string _connectionString;
 
         public AdministrationRepository(ApplicationDbContext dbContext)
         {
-            _dbContext = dbContext;
             _connectionString = dbContext.Database.GetConnectionString();
         }
 
@@ -28,7 +25,7 @@ namespace Master.Data.Repositories
             }
         }
 
-        public async Task<BaseResponse<int>> CreateCategoryForSchoolYear(CreateNewSchoolYearDto schoolYearDto)
+        public async Task<int> CreateCategoryForSchoolYear(CreateNewSchoolYearDto schoolYearDto)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -42,16 +39,16 @@ namespace Master.Data.Repositories
                     var scholYearId = await connection.QuerySingleAsync<int>(selectSql);
                     await connection.ExecuteAsync(updateSql, new { Id = scholYearId });
 
-                    return BaseResponse<int>.Success(scholYearId);
+                    return scholYearId;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<int>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<int>>> CreateClasses(List<CreateNewSchoolYearDto> classes)
+        public async Task<List<int>> CreateClasses(List<CreateNewSchoolYearDto> classes)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -74,18 +71,18 @@ namespace Master.Data.Repositories
                         }
                     }
 
-                    return BaseResponse<List<int>>.Success(insertedIds);
+                    return insertedIds;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<int>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<string>> CreateFormPeriodsForClasses(List<int> classes)
+        public async Task CreateFormPeriodsForClasses(List<int> classes)
         {
-            return await ExecuteInConnectionAsync(async connection =>
+            await ExecuteInConnectionAsync(async connection =>
             {
                 using (var transaction = await connection.BeginTransactionAsync())
                 {
@@ -101,18 +98,19 @@ namespace Master.Data.Repositories
                         }
 
                         await transaction.CommitAsync();
-                        return BaseResponse<string>.Success("Success");
                     }
                     catch (Exception ex)
                     {
                         await transaction.RollbackAsync();
-                        return BaseResponse<string>.BadRequest(ex.Message);
+                        throw;
                     }
                 }
+
+                return Task.CompletedTask;
             });
         }
 
-        public async Task<BaseResponse<int>> CreateSchoolYear(CreateNewSchoolYearDto schoolYear)
+        public async Task<int> CreateSchoolYear(CreateNewSchoolYearDto schoolYear)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -122,17 +120,16 @@ namespace Master.Data.Repositories
 
                 try
                 {
-                    var schoolYearId = await connection.QuerySingleAsync<int>(insertSql, schoolYear);
-                    return BaseResponse<int>.Success(schoolYearId);
+                    return await connection.QuerySingleAsync<int>(insertSql, schoolYear);
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<int>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<SchoolYearResponseDto>>> GetSchoolYears()
+        public async Task<List<SchoolYearResponseDto>> GetSchoolYears()
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -143,16 +140,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var query = await connection.QueryAsync<SchoolYearResponseDto>(sql);
-                    return BaseResponse<List<SchoolYearResponseDto>>.Success(query.ToList());
+                    return query.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<SchoolYearResponseDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<CategoryOrderAndPath>> GetLastCategorySortOrderAndId()
+        public async Task<CategoryOrderAndPath> GetLastCategorySortOrderAndId()
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -160,21 +157,16 @@ namespace Master.Data.Repositories
 
                 try
                 {
-                    var result = await connection.QuerySingleOrDefaultAsync<CategoryOrderAndPath>(query);
-
-                    if (result == null)
-                        return BaseResponse<CategoryOrderAndPath>.BadRequest("No category found.");
-
-                    return BaseResponse<CategoryOrderAndPath>.Success(result);
+                    return await connection.QuerySingleOrDefaultAsync<CategoryOrderAndPath>(query);
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<CategoryOrderAndPath>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<GetScheduleDto>>> GetSchedule(int id)
+        public async Task<List<GetScheduleDto>> GetSchedule(int id)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -189,16 +181,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryAsync<GetScheduleDto>(sql, new { Id = id });
-                    return BaseResponse<List<GetScheduleDto>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<GetScheduleDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<PeriodResponseDto>>> GetPeriods()
+        public async Task<List<PeriodResponseDto>> GetPeriods()
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -207,16 +199,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryAsync<PeriodResponseDto>(query);
-                    return BaseResponse<List<PeriodResponseDto>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<PeriodResponseDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<GetReportResponseDto>>> GetReports(int? schoolYearId)
+        public async Task<List<GetReportResponseDto>> GetReports(int? schoolYearId)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -231,16 +223,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryAsync<GetReportResponseDto>(sql, new { SchoolYearId = schoolYearId });
-                    return BaseResponse<List<GetReportResponseDto>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<GetReportResponseDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<string>> EditSchoolYear(EditSchoolYearDto editSchoolYear)
+        public async Task<string> EditSchoolYear(EditSchoolYearDto editSchoolYear)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -251,16 +243,16 @@ namespace Master.Data.Repositories
                 {
                     var affectedRows = await connection.ExecuteAsync(sql, editSchoolYear);
                     var result = await connection.ExecuteAsync(updateCategoryQuery, new { editSchoolYear.SchoolYear, editSchoolYear.Id });
-                    return BaseResponse<string>.Success("School year updated successfully.");
+                    return "School year updated successfully.";
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<string>> EditPeriod(EditPeriodDto editPeriod)
+        public async Task<string> EditPeriod(EditPeriodDto editPeriod)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -269,18 +261,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var affectedRows = await connection.ExecuteAsync(sql, editPeriod);
-
-                    return BaseResponse<string>.Success("Period updated successfully.");
-
+                    return "Period updated successfully.";
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<GetReportResponseDto>>> GetReportDetails(int reportId)
+        public async Task<List<GetReportResponseDto>> GetReportDetails(int reportId)
         {
             string sql = @"SELECT r.id AS Id, r.date AS Date, r.details AS Details, 
                    c.fullname AS CourseName, c.id AS CourseId, 
@@ -307,16 +297,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryAsync<GetReportResponseDto>(sql, new { ReportId = reportId });
-                    return BaseResponse<List<GetReportResponseDto>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<GetReportResponseDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<GetTeacherDto>>> GetAllTeachers()
+        public async Task<List<GetTeacherDto>> GetAllTeachers()
         {
             string sql = @"SELECT DISTINCT u.id, u.firstname, u.lastname 
                    FROM mdl_role_assignments ra 
@@ -329,16 +319,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryAsync<GetTeacherDto>(sql);
-                    return BaseResponse<List<GetTeacherDto>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<GetTeacherDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<string>> ChangePeriodStatus(ChangePeriodStatusDto changePeriodStatus)
+        public async Task<string> ChangePeriodStatus(ChangePeriodStatusDto changePeriodStatus)
         {
             string updateOtherPeriods = "UPDATE mdl_periods SET is_active = 0 WHERE id != @Id;";
             string updateCurrentPeriod = "UPDATE mdl_periods SET is_active = 1 WHERE id = @Id;";
@@ -350,22 +340,21 @@ namespace Master.Data.Repositories
                     await connection.ExecuteAsync(updateOtherPeriods, new { changePeriodStatus.Id });
                     await connection.ExecuteAsync(updateCurrentPeriod, new { changePeriodStatus.Id });
 
-                    return BaseResponse<string>.Success("Period status changed successfully.");
+                    return "Period status changed successfully.";
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
-
 
         private async Task<List<GetTeacherDto>> FetchAllTeachersAsync(IDbConnection connection, string sqlQuery)
         {
             return (await connection.QueryAsync<GetTeacherDto>(sqlQuery)).ToList();
         }
 
-        public async Task<BaseResponse<string>> ChangeSchoolYearStatus(ChangePeriodStatusDto changeSchoolYearStatus)
+        public async Task<string> ChangeSchoolYearStatus(ChangePeriodStatusDto changeSchoolYearStatus)
         {
             string updateOtherPeriods = "UPDATE mdl_school_year SET is_active = 0 WHERE id != @Id;";
             string updateCurrentPeriod = "UPDATE mdl_school_year SET is_active = 1 WHERE id = @Id;";
@@ -377,16 +366,16 @@ namespace Master.Data.Repositories
                     await connection.ExecuteAsync(updateOtherPeriods, new { changeSchoolYearStatus.Id });
                     await connection.ExecuteAsync(updateCurrentPeriod, new { changeSchoolYearStatus.Id });
 
-                    return BaseResponse<string>.Success("School year status changed successfully.");
+                    return "School year status changed successfully.";
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<int>> CreatePeriod(CreatePeriodDto createPeriod)
+        public async Task<int> CreatePeriod(CreatePeriodDto createPeriod)
         {
             string insertSql = "INSERT INTO mdl_periods (name) VALUES (@Name);";
 
@@ -395,16 +384,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.ExecuteAsync(insertSql, createPeriod);
-                    return BaseResponse<int>.Success(result);
+                    return result;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<int>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<UnsubmittedReport>>> GetUnsubmittedReports()
+        public async Task<List<UnsubmittedReport>> GetUnsubmittedReports()
         {
             string sql = "SELECT rt.course_id AS CourseId, rt.date AS Date, rt.id AS Id, c.fullname AS CourseName, ct.id AS ClassId, ct.name AS ClassName " +
                          "FROM mdl_report_tracking rt " +
@@ -417,16 +406,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryAsync<UnsubmittedReport>(sql);
-                    return BaseResponse<List<UnsubmittedReport>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<UnsubmittedReport>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<string>> DeletePeriod(int id)
+        public async Task<string> DeletePeriod(int id)
         {
             string deleteSql = "DELETE FROM mdl_periods WHERE id = @Id;";
 
@@ -435,16 +424,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     await connection.ExecuteAsync(deleteSql, new { Id = id });
-                    return BaseResponse<string>.Success("Successfully deleted.");
+                    return "Successfully deleted.";
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<GetClassesDto>>> GetAllClassesForSchoolYear(int categoryId)
+        public async Task<List<GetClassesDto>> GetAllClassesForSchoolYear(int categoryId)
         {
             string sql = "SELECT ct.id AS ClassId, ct.name AS ClassName FROM mdl_course_categories ct WHERE ct.parent = @CategoryId;";
 
@@ -453,16 +442,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryAsync<GetClassesDto>(sql, new { CategoryId = categoryId });
-                    return BaseResponse<List<GetClassesDto>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<GetClassesDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<CoursesDto>>> GetAllCoursesForClasses(List<GetClassesDto> getClassesDtos)
+        public async Task<List<CoursesDto>> GetAllCoursesForClasses(List<GetClassesDto> getClassesDtos)
         {
             string classIds = string.Join(",", getClassesDtos.Select(c => c.ClassId));
 
@@ -476,16 +465,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryAsync<CoursesDto>(sql);
-                    return BaseResponse<List<CoursesDto>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<CoursesDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<int>> GetTotalStudentsByMainCourses(List<CoursesDto> getMainCourse)
+        public async Task<int> GetTotalStudentsByMainCourses(List<CoursesDto> getMainCourse)
         {
             string courseIds = string.Join(",", getMainCourse.Select(c => c.Id));
 
@@ -503,16 +492,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryFirstOrDefaultAsync<int>(sql);
-                    return BaseResponse<int>.Success(result);
+                    return result;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<int>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<int>> GetTotalTeachersByCourses(List<CoursesDto> courses)
+        public async Task<int> GetTotalTeachersByCourses(List<CoursesDto> courses)
         {
             string courseIds = string.Join(",", courses.Select(c => c.Id));
 
@@ -529,16 +518,16 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryFirstOrDefaultAsync<int>(sql);
-                    return BaseResponse<int>.Success(result);
+                    return result;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<int>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<int>> GetTotalYears()
+        public async Task<int> GetTotalYears()
         {
             string sql = "SELECT COUNT(sy.id) AS TotalYears FROM mdl_school_year sy;";
 
@@ -547,35 +536,35 @@ namespace Master.Data.Repositories
                 try
                 {
                     var result = await connection.QueryFirstOrDefaultAsync<int>(sql);
-                    return BaseResponse<int>.Success(result);
+                    return result;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<int>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<GetFormTeacherDto>>> GetFormTeachers(int schoolYearId)
+        public async Task<List<GetFormTeacherDto>> GetFormTeachers(int schoolYearId)
         {
             string sql = @"SELECT ft.id AS ID, ft.class_id AS ClassId, ct.name AS ClassName, 
-                          ft.teacher_id AS TeacherId, u.firstname AS TeacherName, 
-                          u.lastname AS TeacherLastName 
-                   FROM mdl_class_formteacher ft 
-                   LEFT JOIN mdl_course_categories ct ON ft.class_id = ct.id 
-                   LEFT JOIN mdl_user u ON ft.teacher_id = u.id 
-                   WHERE ft.school_year_id = @SchoolYearId;";
+                  ft.teacher_id AS TeacherId, u.firstname AS TeacherName, 
+                  u.lastname AS TeacherLastName 
+           FROM mdl_class_formteacher ft 
+           LEFT JOIN mdl_course_categories ct ON ft.class_id = ct.id 
+           LEFT JOIN mdl_user u ON ft.teacher_id = u.id 
+           WHERE ft.school_year_id = @SchoolYearId;";
 
             return await ExecuteInConnectionAsync(async connection =>
             {
                 try
                 {
                     var result = await connection.QueryAsync<GetFormTeacherDto>(sql, new { SchoolYearId = schoolYearId });
-                    return BaseResponse<List<GetFormTeacherDto>>.Success(result.ToList());
+                    return result.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<GetFormTeacherDto>>.BadRequest(ex.Message);
+                    throw; 
                 }
             });
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rMECEc9CwqqQVllZY62/apDnaG8AtWZ9AEIdKqPwUHlQDqg14FY4XCcRP0LVSp574Vpr1yAAuMFqORncv+0nWQ==",
+  "dgSpecHash": "DPhfNs78mP3uqvy2LhEB/HXAc55F7n2WoRBBQAii+WvQ+s+wyugUgf46nj8bbuT4C8K3WWKQbHtJAOYV8UnUvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Master.csproj",
+  "projectFilePath": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Master.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TECHCOM\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\TECHCOM\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

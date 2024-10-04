@@ -39,15 +39,16 @@ namespace Master.Core.Services
         {
             var teacherId = _jwtManager.GetIdFromJwtToken();
             var result = await _teacherRepository.GetMyCourses(teacherId);
-            return result;
 
+            return BaseResponse<List<GetTeacherCoursesDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<FormClassesDto>>> GetMyFormClasses()
         {
             var teacherId = _jwtManager.GetIdFromJwtToken();
             var result = await _teacherRepository.GetMyFormClasses(teacherId);
-            return result;
+
+            return BaseResponse<List<FormClassesDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<GetReportResponseDto>>> GetMyReports(int schoolYearId)
@@ -59,13 +60,13 @@ namespace Master.Core.Services
 
             if (result != null)
             {
-                foreach (var report in result.Data)
+                foreach (var report in result)
                 {
                     report.RemarkDescription = _encryption.Decrypt(report.RemarkDescription);
                 }
             }
 
-            return result;
+            return BaseResponse<List<GetReportResponseDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<TeacherScheduleDto>>> GetMySchedule(int? schoolYearId)
@@ -80,12 +81,6 @@ namespace Master.Core.Services
             var teacherId = _jwtManager.GetIdFromJwtToken();
 
             var coursesForTeacher = await _teacherRepository.GetCoursesForTeacherByYear(categoryIds, teacherId);
-
-            if (!coursesForTeacher.IsSuccess)
-            {
-                return BaseResponse<List<TeacherScheduleDto>>.BadRequest(coursesForTeacher.Message);
-            }
-
             var getScheduleByYear = await _helperService.GetScheduleByYear(currentActiveYearAndCategory.Data.id.Value);
 
             if (!getScheduleByYear.IsSuccess)
@@ -93,7 +88,7 @@ namespace Master.Core.Services
                 return BaseResponse<List<TeacherScheduleDto>>.BadRequest(getScheduleByYear.Message);
             }
 
-            var teacherCoursesId = coursesForTeacher.Data.Select(x => x.CourseId).ToList();
+            var teacherCoursesId = coursesForTeacher.Select(x => x.CourseId).ToList();
             var schedule = getScheduleByYear.Data.Where(x => teacherCoursesId.Contains(x.CourseId)).ToList();
 
             var response = schedule.GroupBy(x => x.Day).Select(s => new TeacherScheduleDto
@@ -120,7 +115,8 @@ namespace Master.Core.Services
         {
             var currentTeacherId = _jwtManager.GetIdFromJwtToken();
             var result = await _teacherRepository.GetUnsubmittedReportForTeacher(currentTeacherId);
-            return result;
+
+            return BaseResponse<List<UnsubmittedReport>>.Success(result);
         }
 
         public async Task<BaseResponse<string>> PutGradeForStudent(List<PutGradeDto> gradeDtos)
@@ -130,7 +126,7 @@ namespace Master.Core.Services
             var gradesToDelete = gradeDtos.Where(g => g.GradeId != null).Select(g => new GetFinalGrades { ClassId = g.ClassId, CourseId = g.CourseId, UserId = g.UserId, PeriodId = g.PeriodId }).Distinct();
 
             var getFinalGradesForDeletedGrade = await _teacherRepository.GetFinalGrades(gradesToDelete.ToList());
-            var finalGrades = getFinalGradesForDeletedGrade.Data.Select(g => (int?)g).ToList();
+            var finalGrades = getFinalGradesForDeletedGrade.Select(g => (int?)g).ToList();
 
             gradeIdsToDelete.AddRange(finalGrades.Where(g => g != null).Distinct());
 
@@ -138,14 +134,7 @@ namespace Master.Core.Services
             foreach (var gradeDto in gradeDtos)
             {
                 var grades = await _teacherRepository.GetGradesByStudentCourse(gradeDto);
-
-                if (!grades.IsSuccess)
-                {
-                    return BaseResponse<string>.BadRequest(grades.Message);
-                }
-
-                var putGrade = await _teacherRepository.PutGradeForStudent(gradeDto);
-
+                await _teacherRepository.PutGradeForStudent(gradeDto);
             }
 
             return BaseResponse<string>.Success("Grade has been saved succesfully");
@@ -153,8 +142,8 @@ namespace Master.Core.Services
 
         public async Task<BaseResponse<string>> PutGradesFromExcel(List<PutGradeDto> grades)
         {
-            var result = await _teacherRepository.PutGradeFromExcel(grades);
-            return result;
+            await _teacherRepository.PutGradeFromExcel(grades);
+            return BaseResponse<string>.Success("Grades saved sucesfully!");
         }
 
         public async Task<BaseResponse<string>> TrackReports()

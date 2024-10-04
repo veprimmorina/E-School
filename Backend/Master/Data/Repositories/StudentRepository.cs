@@ -1,6 +1,5 @@
 ﻿using Dapper;
 using Master.Core.DTO;
-using Master.Core.Wrappers;
 using Master.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using MySql.Data.MySqlClient;
@@ -9,12 +8,10 @@ namespace Master.Data.Repositories
 {
     public class StudentRepository : IStudentRepository
     {
-        private readonly ApplicationDbContext _dbContext;
         private readonly string _connectionString;
 
         public StudentRepository(ApplicationDbContext dbContext)
         {
-            _dbContext = dbContext;
             _connectionString = dbContext.Database.GetConnectionString();
         }
 
@@ -27,7 +24,7 @@ namespace Master.Data.Repositories
             }
         }
 
-        public async Task<BaseResponse<ClassDto>> GetClassForStudent(int studentId)
+        public async Task<ClassDto> GetClassForStudent(int studentId)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -41,12 +38,11 @@ namespace Master.Data.Repositories
                              "WHERE u.id = @StudentId AND c.fullname = @Course " +
                              "ORDER BY ra.timemodified DESC LIMIT 1;";
 
-                var result = await connection.QuerySingleOrDefaultAsync<ClassDto>(sql, new { StudentId = studentId, Course = course });
-                return BaseResponse<ClassDto>.Success(result);
+                return await connection.QuerySingleOrDefaultAsync<ClassDto>(sql, new { StudentId = studentId, Course = course });
             });
         }
 
-        public async Task<BaseResponse<List<StudentsClassGrades>>> GetGradesForStudentAndCourses(int studentId, List<int> courseIds)
+        public async Task<List<StudentsClassGrades>> GetGradesForStudentAndCourses(int studentId, List<int> courseIds)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -61,11 +57,11 @@ namespace Master.Data.Repositories
                 var parameters = new DynamicParameters();
 
                 var result = await connection.QueryAsync<StudentsClassGrades>(sql, parameters);
-                return BaseResponse<List<StudentsClassGrades>>.Success(result.ToList());
+                return result.ToList();
             });
         }
 
-        public async Task<BaseResponse<List<GetScheduleDto>>> GetScheduleByClass(int classId)
+        public async Task<List<GetScheduleDto>> GetScheduleByClass(int classId)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -77,11 +73,11 @@ namespace Master.Data.Repositories
                              "WHERE s.CategoryId = @ClassId;";
 
                 var query = await connection.QueryAsync<GetScheduleDto>(sql, new { ClassId = classId });
-                return BaseResponse<List<GetScheduleDto>>.Success(query.ToList());
+                return query.ToList();
             });
         }
 
-        public async Task<BaseResponse<List<StudentAbsenceDto>>> GetStudentAbsences(int schoolYearId, int periodId, int studentId)
+        public async Task<List<StudentAbsenceDto>> GetStudentAbsences(int schoolYearId, int periodId, int studentId)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -96,7 +92,7 @@ namespace Master.Data.Repositories
                              "WHERE a.school_year_id = @SchoolYearId and a.period_id = @PeriodId and a.user_id = @StudentId;";
 
                 var query = await connection.QueryAsync<StudentAbsenceDto>(sql, new { SchoolYearId = schoolYearId, PeriodId = periodId, StudentId = studentId });
-                return BaseResponse<List<StudentAbsenceDto>>.Success(query.ToList());
+                return query.ToList();
             });
         }
     }

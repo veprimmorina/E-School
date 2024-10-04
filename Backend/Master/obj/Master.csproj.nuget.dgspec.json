@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Master.csproj": {}
+    "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Master.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Master.csproj": {
+    "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Master.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Master.csproj",
+        "projectUniqueName": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Master.csproj",
         "projectName": "Master",
-        "projectPath": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Master.csproj",
+        "projectPath": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Master.csproj",
         "packagesPath": "C:\\Users\\TECHCOM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\obj\\",
+        "outputPath": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TECHCOM\\AppData\\Roaming\\NuGet\\NuGet.Config",

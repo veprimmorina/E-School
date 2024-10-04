@@ -30,15 +30,15 @@ namespace Master.Core.Services
 
             var getStudentAbsences = await _studentRepository.GetStudentAbsences(schoolYearId.Data.id.Value, periodId.Data.id, studentId);
 
-            return getStudentAbsences;
+            return BaseResponse<List<StudentAbsenceDto>>.Success(getStudentAbsences);
         }
 
         public async Task<BaseResponse<GetFormTeacherDto>> GetMyFormTeacher()
         {
             var studentClass = await _studentRepository.GetClassForStudent(studentId);
-            var studentFormTeacher = await _helperService.GetFormTeacherByClassId(studentClass.Data.Id);
+            var studentFormTeacher = await _helperService.GetFormTeacherByClassId(studentClass.Id);
 
-            return studentFormTeacher;
+            return BaseResponse<GetFormTeacherDto>.Success(studentFormTeacher.Data);
         }
 
         public async Task<BaseResponse<List<StudentDto>>> GetMyGrades()
@@ -46,22 +46,22 @@ namespace Master.Core.Services
             var studentId = _jwtManager.GetIdFromJwtToken();
             var studentClass = await _studentRepository.GetClassForStudent(studentId);
 
-            if (!studentClass.IsSuccess)
+            if (studentClass == null)
             {
-                return BaseResponse<List<StudentDto>>.Success(studentClass.Message);
+                return BaseResponse<List<StudentDto>>.BadRequest("Student not found!");
             }
 
-            var allCourses = await _classesRepository.GetCoursesByClassId(studentClass.Data.Id);
-            var getGradesForStudentAndCourses = await _studentRepository.GetGradesForStudentAndCourses(studentId, allCourses.Data.Select(x => x.CourseId).ToList());
+            var allCourses = await _classesRepository.GetCoursesByClassId(studentClass.Id);
+            var getGradesForStudentAndCourses = await _studentRepository.GetGradesForStudentAndCourses(studentId, allCourses.Select(x => x.CourseId).ToList());
 
             var periods = await _helperService.GetPeriods();
 
-            var response = getGradesForStudentAndCourses.Data.GroupBy(s => s.UserId).Select(g => new StudentDto
+            var response = getGradesForStudentAndCourses.GroupBy(s => s.UserId).Select(g => new StudentDto
             {
                 UserId = g.Key,
                 FirstName = g.First().FirstName,
                 LastName = g.First().LastName,
-                Courses = allCourses.Data.Select(ac => new CourseDto
+                Courses = allCourses.Select(ac => new CourseDto
                 {
                     CourseId = ac.CourseId,
                     CourseName = ac.CourseName,
@@ -88,14 +88,14 @@ namespace Master.Core.Services
             var studentId = _jwtManager.GetIdFromJwtToken();
             var getStudentClass = await _studentRepository.GetClassForStudent(9);
 
-            if (!getStudentClass.IsSuccess)
+            if (getStudentClass == null)
             {
-                return BaseResponse<List<TeacherScheduleDto>>.BadRequest(getStudentClass.Message);
+                return BaseResponse<List<TeacherScheduleDto>>.BadRequest("Student not found!");
             }
 
-            var getStudentSchedule = await _studentRepository.GetScheduleByClass(getStudentClass.Data.Id);
+            var getStudentSchedule = await _studentRepository.GetScheduleByClass(getStudentClass.Id);
 
-            var response = getStudentSchedule.Data.GroupBy(x => x.Day).Select(s => new TeacherScheduleDto
+            var response = getStudentSchedule.GroupBy(x => x.Day).Select(s => new TeacherScheduleDto
             {
                 Day = s.First().Day,
                 Schedules = s.Select(y => new GetScheduleDto
@@ -121,7 +121,7 @@ namespace Master.Core.Services
             var absences = await GetMyAbsences();
             var formteacher = await GetMyFormTeacher();
             var studentClass = await _studentRepository.GetClassForStudent(studentId);
-            var classCourses = await _classesRepository.GetCoursesByClassId(studentClass.Data.Id);
+            var classCourses = await _classesRepository.GetCoursesByClassId(studentClass.Id);
             var currentPeriod = await _helperService.GetCurrentActivePeriod();
             var currentSchoolYear = await _helperService.GetCurrentActiveYearAndCategory();
             var studentName = _jwtManager.GetUserDetails();
@@ -129,11 +129,11 @@ namespace Master.Core.Services
             var studentStats = new StudentStats
             {
                 Absences = absences.Data.Count(),
-                Class = studentClass.Data.Name,
+                Class = studentClass.Name,
                 FormTeacher = formteacher.Data.TeacherName + " " + formteacher.Data.TeacherLastName,
                 Period = currentPeriod.Data.name,
                 SchoolYear = currentSchoolYear.Data.SchoolYear,
-                Courses = classCourses.Data.Count(),
+                Courses = classCourses.Count(),
                 StudentName = studentName.FirstName,
             };
 

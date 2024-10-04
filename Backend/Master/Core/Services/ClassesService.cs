@@ -30,7 +30,7 @@ namespace Master.Core.Services
         {
             var schedulesToDelete = createSchedule.Where(x => x.Id != null).Select(y => y.Id).ToList();
             var currentSchoolYear = await _helperService.GetCurrentActiveYearAndCategory();
-            var deleteSchedules = await _classesRepository.DeleteSchedules(schedulesToDelete.ToList());
+            await _classesRepository.DeleteSchedules(schedulesToDelete.ToList());
 
             foreach (var schedule in createSchedule)
             {
@@ -40,12 +40,7 @@ namespace Master.Core.Services
                 schedule.EndTime = hour.Data.EndTime;
                 schedule.SchoolYearId = currentSchoolYear.Data.id;
 
-                var result = await _classesRepository.CreateSchedule(schedule);
-
-                if (!result.IsSuccess)
-                {
-                    return BaseResponse<string>.BadRequest(result.Data);
-                }
+                await _classesRepository.CreateSchedule(schedule);
             }
 
             return BaseResponse<string>.Success("Succesfully Created");
@@ -136,7 +131,7 @@ namespace Master.Core.Services
         public async Task<BaseResponse<List<StudentsGradeResponseDto>>> GetStudentsByCourse(int courseId)
         {
             var students = await _classesRepository.ImportStudentsOfClass(courseId);
-            return students;
+            return BaseResponse<List<StudentsGradeResponseDto>>.Success(students);
         }
 
         public async Task<BaseResponse<string>> CreateFormTeacher(CreateFormTeacher createFormTeacher)
@@ -144,15 +139,15 @@ namespace Master.Core.Services
 
             var currentActiveYearId = await _helperService.GetCurrentActiveYearAndCategory();
             createFormTeacher.SchoolYearId = currentActiveYearId.Data.id;
-            var result = await _classesRepository.CreateFormTeacher(createFormTeacher);
+            await _classesRepository.CreateFormTeacher(createFormTeacher);
 
-            return result;
+            return BaseResponse<string>.Success("Form teacher saved successfully!");
         }
 
         public async Task<BaseResponse<ClassDetailsDto>> GetClassDetails(int id)
         {
             var classDetails = await _classesRepository.GetClassDetails(id);
-            return classDetails;
+            return BaseResponse<ClassDetailsDto>.Success(classDetails);
         }
 
         public async Task<BaseResponse<List<GetClassesDto>>> GetMyClasses()
@@ -160,13 +155,13 @@ namespace Master.Core.Services
             var teacherId = _jwtManager.GetIdFromJwtToken();
             var result = await _classesRepository.GetMyClasses(teacherId);
             var userDetails = _jwtManager.GetUserDetails();
-            var resultUser = result.Data.FirstOrDefault();
+            var resultUser = result.FirstOrDefault();
             if (resultUser != null && userDetails != null)
             {
                 resultUser.UserDetails = userDetails.FirstName;
             }
 
-            return result;
+            return BaseResponse<List<GetClassesDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<StudentDto>>> GetStudentsOfClass(int classId)
@@ -174,25 +169,25 @@ namespace Master.Core.Services
             var students = await _classesRepository.GetStudentsOfClass(classId);
             var allCourses = await _classesRepository.GetCoursesByClassId(classId);
 
-            if (!students.IsSuccess)
+            if (!students.Any() || students.Count() < 1)
             {
-                return BaseResponse<List<StudentDto>>.Success(students.Message);
+                return BaseResponse<List<StudentDto>>.Success("Students not found!");
             }
 
             var periods = await _helperService.GetPeriods();
             var teacherId = _jwtManager.GetIdFromJwtToken();
-            var myCourses = await _teacherRepository.GetMyCourses(teacherId);//id
+            var myCourses = await _teacherRepository.GetMyCourses(teacherId);
 
-            var studentsToReturn = students.Data.GroupBy(s => s.UserId).Select(g => new StudentDto
+            var studentsToReturn = students.GroupBy(s => s.UserId).Select(g => new StudentDto
             {
                 UserId = g.Key,
                 FirstName = g.First().FirstName,
                 LastName = g.First().LastName,
-                Courses = allCourses.Data.Select(ac => new CourseDto
+                Courses = allCourses.Select(ac => new CourseDto
                 {
                     CourseId = ac.CourseId,
                     CourseName = ac.CourseName,
-                    IsMyCourse = myCourses.Data.Any(x => x.Id == ac.CourseId),
+                    IsMyCourse = myCourses.Any(x => x.Id == ac.CourseId),
                     Periods = periods.Data.Select(p => new PeriodResponseDto
                     {
                         id = p.id,
@@ -215,29 +210,29 @@ namespace Master.Core.Services
         public async Task<BaseResponse<List<StudentAbsenceDto>>> GetNewAbsencesForStudents(int classId)
         {
             var getStudentsOfClass = await _classesRepository.GetStudentsOfClass(classId);
-            var studentIds = getStudentsOfClass.Data.Select(s => s.UserId).ToList();
+            var studentIds = getStudentsOfClass.Select(s => s.UserId).ToList();
 
             var result = await _classesRepository.GetNewAbsencesForStudents(studentIds);
 
-            return result;
+            return BaseResponse<List<StudentAbsenceDto>>.Success(result);
         }
 
         public async Task<BaseResponse<string>> EditStudentsAbsences(List<EditAbsenceDto> absenceDto)
         {
-            var result = await _classesRepository.EditStudentsAbsences(absenceDto);
-            return result;
+            await _classesRepository.EditStudentsAbsences(absenceDto);
+            return BaseResponse<string>.Success("Absences edited sucesfully!");
         }
 
         public async Task<BaseResponse<List<GetClassesWithoutFormTeacherDto>>> GetClassesWithoutFormTeacher()
         {
             var result = await _classesRepository.GetClassesWithoutFormTeacher();
-            return result;
+            return BaseResponse<List<GetClassesWithoutFormTeacherDto>>.Success(result);
         }
 
         public async Task<BaseResponse<string>> EditFormTeacher(CreateFormTeacher formTeacherDto)
         {
-            var result = await _classesRepository.EditFormTeacher(formTeacherDto);
-            return result;
+            await _classesRepository.EditFormTeacher(formTeacherDto);
+            return BaseResponse<string>.Success("Fotm teacher edited sucesfully!");
         }
     }
 }

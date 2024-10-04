@@ -1,6 +1,5 @@
 ﻿using Dapper;
 using Master.Core.DTO;
-using Master.Core.Wrappers;
 using Master.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
@@ -9,12 +8,10 @@ namespace Master.Data.Repositories
 {
     public class ClassesRepository : IClassesRepository
     {
-        private readonly ApplicationDbContext _dbContext;
         private readonly string _connectionString;
 
         public ClassesRepository(ApplicationDbContext dbContext)
         {
-            _dbContext = dbContext;
             _connectionString = dbContext.Database.GetConnectionString();
         }
 
@@ -27,43 +24,43 @@ namespace Master.Data.Repositories
             }
         }
 
-        public async Task<BaseResponse<string>> CreateFormTeacher(CreateFormTeacher createFormTeacher)
+        public async Task CreateFormTeacher(CreateFormTeacher createFormTeacher)
         {
             string sql = "INSERT INTO mdl_class_formteacher (teacher_id, class_id, school_year_id) VALUES (@TeacherId, @ClassId, @SchoolYearId)";
 
-            return await ExecuteInConnectionAsync(async connection =>
+            await ExecuteInConnectionAsync(async connection =>
             {
                 try
                 {
                     await connection.ExecuteAsync(sql, createFormTeacher);
-                    return BaseResponse<string>.Success("FormTeacher created successfully!");
+                    return Task.CompletedTask;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<string>> CreateSchedule(CreateScheduleDto createSchedule)
+        public async Task CreateSchedule(CreateScheduleDto createSchedule)
         {
             string sql = "INSERT INTO mdl_class_schedule (day, hour, courseid, categoryid, start_time, end_time, school_year_id) VALUES (@Day, @Hour, @CourseId, @CategoryId, @StartTime, @EndTime, @SchoolYearId)";
 
-            return await ExecuteInConnectionAsync(async connection =>
+            await ExecuteInConnectionAsync(async connection =>
             {
                 try
                 {
                     await connection.ExecuteAsync(sql, createSchedule);
-                    return BaseResponse<string>.Success("Schedule created successfully!");
+                    return Task.CompletedTask;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<ClassDetailsDto>> GetClassDetails(int id)
+        public async Task<ClassDetailsDto> GetClassDetails(int id)
         {
             string sql = "SELECT teacher.*, mdl_user.firstname, mdl_user.lastname, mdl_course_categories.name, mdl_school_year.year " +
                          "FROM mdl_class_formteacher AS teacher " +
@@ -77,11 +74,11 @@ namespace Master.Data.Repositories
                 try
                 {
                     var query = await connection.QueryAsync<ClassDetailsDto>(sql, new { ClassId = id });
-                    return BaseResponse<ClassDetailsDto>.Success(query.FirstOrDefault());
+                    return query.FirstOrDefault();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<ClassDetailsDto>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
@@ -98,7 +95,7 @@ namespace Master.Data.Repositories
             });
         }
 
-        public async Task<BaseResponse<List<CourseDto>>> GetCoursesByClassId(int categoryId)
+        public async Task<List<CourseDto>> GetCoursesByClassId(int categoryId)
         {
             string sql = "SELECT c.id AS CourseId, c.fullname AS CourseName FROM mdl_course c WHERE c.category = @CategoryId";
 
@@ -107,11 +104,11 @@ namespace Master.Data.Repositories
                 try
                 {
                     var query = await connection.QueryAsync<CourseDto>(sql, new { CategoryId = categoryId });
-                    return BaseResponse<List<CourseDto>>.Success(query.ToList());
+                    return query.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<CourseDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
@@ -132,13 +129,13 @@ namespace Master.Data.Repositories
                 }
                 catch (Exception e)
                 {
-                    throw new Exception(e.Message);
+                    throw;
                 }
             });
         }
 
 
-        public async Task<BaseResponse<List<GetClassesDto>>> GetMyClasses(int teacherId)
+        public async Task<List<GetClassesDto>> GetMyClasses(int teacherId)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -161,11 +158,11 @@ namespace Master.Data.Repositories
                        GROUP BY cat.id;";
 
                 var query = await connection.QueryAsync<GetClassesDto>(sql, new { TeacherId = teacherId });
-                return BaseResponse<List<GetClassesDto>>.Success(query.ToList());
+                return query.ToList();
             });
         }
 
-        public async Task<BaseResponse<List<StudentAbsenceDto>>> GetNewAbsencesForStudents(List<int> studentIds)
+        public async Task<List<StudentAbsenceDto>> GetNewAbsencesForStudents(List<int> studentIds)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -193,13 +190,13 @@ namespace Master.Data.Repositories
                 }
 
                 var query = await connection.QueryAsync<StudentAbsenceDto>(sql, parameters);
-                return BaseResponse<List<StudentAbsenceDto>>.Success(query.ToList());
+                return query.ToList();
             });
         }
 
-        public async Task<BaseResponse<string>> EditStudentsAbsences(List<EditAbsenceDto> absenceDto)
+        public async Task EditStudentsAbsences(List<EditAbsenceDto> absenceDto)
         {
-            return await ExecuteInConnectionAsync(async connection =>
+            await ExecuteInConnectionAsync(async connection =>
             {
                 string sql = "UPDATE mdl_students_absences SET reasonable = @Reasonable, is_new = false WHERE id = @Id";
 
@@ -209,16 +206,16 @@ namespace Master.Data.Repositories
                     {
                         await connection.ExecuteAsync(sql, new { absence.Reasonable, absence.Id });
                     }
-                    return BaseResponse<string>.Success("Absences updated successfully!");
+                    return Task.CompletedTask;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<List<StudentsClassGrades>>> GetStudentsOfClass(int classId)
+        public async Task<List<StudentsClassGrades>> GetStudentsOfClass(int classId)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -245,11 +242,11 @@ namespace Master.Data.Repositories
                          AND c.category = @ClassId;";
 
                 var query = await connection.QueryAsync<StudentsClassGrades>(sql, new { ClassId = classId });
-                return BaseResponse<List<StudentsClassGrades>>.Success(query.ToList());
+                return query.ToList();
             });
         }
 
-        public async Task<BaseResponse<List<StudentsGradeResponseDto>>> ImportStudentsOfClass(int classId)
+        public async Task<List<StudentsGradeResponseDto>> ImportStudentsOfClass(int classId)
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -262,12 +259,12 @@ namespace Master.Data.Repositories
                        WHERE c.id = @CourseId AND r.id = 5;";
 
                 var query = await connection.QueryAsync<StudentsGradeResponseDto>(sql, new { CourseId = classId });
-                return BaseResponse<List<StudentsGradeResponseDto>>.Success(query.ToList());
+                return query.ToList();
             });
         }
 
 
-        public async Task<BaseResponse<List<GetClassesWithoutFormTeacherDto>>> GetClassesWithoutFormTeacher()
+        public async Task<List<GetClassesWithoutFormTeacherDto>> GetClassesWithoutFormTeacher()
         {
             return await ExecuteInConnectionAsync(async connection =>
             {
@@ -282,36 +279,36 @@ namespace Master.Data.Repositories
                            WHERE sy.is_active = true AND ft.class_id IS NULL;";
 
                     var query = await connection.QueryAsync<GetClassesWithoutFormTeacherDto>(sql);
-                    return BaseResponse<List<GetClassesWithoutFormTeacherDto>>.Success(query.ToList());
+                    return query.ToList();
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<List<GetClassesWithoutFormTeacherDto>>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<string>> EditFormTeacher(CreateFormTeacher formTeacherDto)
+        public async Task EditFormTeacher(CreateFormTeacher formTeacherDto)
         {
-            return await ExecuteInConnectionAsync(async connection =>
+            await ExecuteInConnectionAsync(async connection =>
             {
                 try
                 {
                     string sql = "UPDATE mdl_class_formteacher SET teacher_id = @TeacherId, class_id = @ClassId WHERE id = @Id";
 
                     await connection.ExecuteAsync(sql, formTeacherDto);
-                    return BaseResponse<string>.Success("Successfully Edited");
+                    return Task.CompletedTask;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }
 
-        public async Task<BaseResponse<string>> DeleteSchedules(List<int?> scheduleIds)
+        public async Task DeleteSchedules(List<int?> scheduleIds)
         {
-            return await ExecuteInConnectionAsync(async connection =>
+            await ExecuteInConnectionAsync(async connection =>
             {
                 string sql = "DELETE FROM mdl_class_schedule WHERE id = @Id;";
 
@@ -322,11 +319,11 @@ namespace Master.Data.Repositories
                         await connection.ExecuteAsync(sql, new { Id = scheduleId });
                     }
 
-                    return BaseResponse<string>.Success("Successfully deleted");
+                    return Task.CompletedTask;
                 }
                 catch (Exception ex)
                 {
-                    return BaseResponse<string>.BadRequest(ex.Message);
+                    throw;
                 }
             });
         }

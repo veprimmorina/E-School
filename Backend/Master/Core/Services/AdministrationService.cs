@@ -26,18 +26,18 @@ namespace Master.Core.Services
 
             var createSchoolYear = await _administrationRepository.CreateSchoolYear(schoolYearDto);
             schoolYearDto.Name = $"Viti shkollor {schoolYearDto.Name}";
-            schoolYearDto.SchoolYearId = createSchoolYear.Data;
+            schoolYearDto.SchoolYearId = createSchoolYear;
             var getLastCategoryOrderAndId = await _administrationRepository.GetLastCategorySortOrderAndId();
-            schoolYearDto.SortOrder = getLastCategoryOrderAndId.Data.SortOrder + 10000;
+            schoolYearDto.SortOrder = getLastCategoryOrderAndId.SortOrder + 10000;
 
             var createCategory = await _administrationRepository.CreateCategoryForSchoolYear(schoolYearDto);
 
 
             foreach (var classes in schoolYearDto.Classes)
             {
-                classes.Parent = createCategory.Data;
+                classes.Parent = createCategory;
                 var getLastCategorySortOrderAndId = await _administrationRepository.GetLastCategorySortOrderAndId();
-                classes.SortOrder = getLastCategorySortOrderAndId.Data.SortOrder + 10000;
+                classes.SortOrder = getLastCategorySortOrderAndId.SortOrder + 10000;
             }
 
             await _administrationRepository.CreateClasses(schoolYearDto.Classes);
@@ -48,13 +48,13 @@ namespace Master.Core.Services
         public async Task<BaseResponse<List<GetFormTeacherDto>>> GetFormTeachers()
         {
             var result = await _administrationRepository.GetFormTeachers(1);
-            return result;
+            return BaseResponse<List<GetFormTeacherDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<PeriodResponseDto>>> GetPeriods()
         {
             var result = await _administrationRepository.GetPeriods();
-            return result;
+            return BaseResponse<List<PeriodResponseDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<TeacherScheduleDto>>> GetSchedule(int? schoolYearId)
@@ -62,7 +62,7 @@ namespace Master.Core.Services
             var actualSchoolYearId = schoolYearId ?? (await _helperService.GetCurrentActiveYearAndCategory()).Data.id;
             var schedule = await _administrationRepository.GetSchedule(actualSchoolYearId.Value);
 
-            var response = schedule.Data.GroupBy(x => x.Day).Select(s => new TeacherScheduleDto
+            var response = schedule.GroupBy(x => x.Day).Select(s => new TeacherScheduleDto
             {
                 Day = s.First().Day,
                 Schedules = s.Select(y => new GetScheduleDto
@@ -85,7 +85,7 @@ namespace Master.Core.Services
         public async Task<BaseResponse<List<SchoolYearResponseDto>>> GetSchoolYears()
         {
             var result = await _administrationRepository.GetSchoolYears();
-            return result;
+            return BaseResponse<List<SchoolYearResponseDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<GetReportResponseDto>>> GetReports(int? schoolYearId)
@@ -94,14 +94,14 @@ namespace Master.Core.Services
             var schoolYear = schoolYearId == null ? getCurrentSchoolYear.Data.id : schoolYearId;
             var result = await _administrationRepository.GetReports(schoolYear);
 
-            return result;
+            return BaseResponse<List<GetReportResponseDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<GetReportDetailsResponseDto>>> GetReportDetailsById(int reportId)
         {
             var report = await _administrationRepository.GetReportDetails(reportId);
 
-            var result = report.Data.GroupBy(x => x.id).Select(x => new GetReportDetailsResponseDto
+            var result = report.GroupBy(x => x.id).Select(x => new GetReportDetailsResponseDto
             {
                 Id = x.First().id,
                 Date = x.First().Date,
@@ -130,13 +130,13 @@ namespace Master.Core.Services
         public async Task<BaseResponse<string>> EditSchoolYear(EditSchoolYearDto editSchoolYear)
         {
             var editSchoolYearReponse = await _administrationRepository.EditSchoolYear(editSchoolYear);
-            return editSchoolYearReponse;
+            return BaseResponse<string>.Success(editSchoolYearReponse);
         }
 
         public async Task<BaseResponse<string>> EditPeriod(EditPeriodDto editPeriod)
         {
             var editSchoolYearReponse = await _administrationRepository.EditPeriod(editPeriod);
-            return editSchoolYearReponse;
+            return BaseResponse<string>.Success(editSchoolYearReponse);
         }
 
         public async Task<BaseResponse<int>> GetActivePeriod()
@@ -148,7 +148,7 @@ namespace Master.Core.Services
         public async Task<BaseResponse<List<GetTeacherDto>>> GetAllTeachers()
         {
             var result = await _administrationRepository.GetAllTeachers();
-            return result;
+            return BaseResponse<List<GetTeacherDto>>.Success(result);
         }
 
         public async Task<BaseResponse<List<GetTeacherDto>>> GetRecommendedFormTeachers()
@@ -156,12 +156,12 @@ namespace Master.Core.Services
             var teachers = await _administrationRepository.GetAllTeachers();
             var formTeachers = await _administrationRepository.GetFormTeachers(1);
 
-            var result = teachers.Data.Select(x => new GetTeacherDto
+            var result = teachers.Select(x => new GetTeacherDto
             {
                 FirstName = x.FirstName,
                 LastName = x.LastName,
                 Id = x.Id,
-                isRecommended = formTeachers.Data.Any(ft => ft.TeacherId == x.Id) ? false : true,
+                isRecommended = formTeachers.Any(ft => ft.TeacherId == x.Id) ? false : true,
             }).ToList();
 
             return BaseResponse<List<GetTeacherDto>>.Success(result);
@@ -170,37 +170,37 @@ namespace Master.Core.Services
         public async Task<BaseResponse<string>> ChangePeriodStatus(ChangePeriodStatusDto changePeriodStatusDto)
         {
             var changePeriodStatus = await _administrationRepository.ChangePeriodStatus(changePeriodStatusDto);
-            return changePeriodStatus;
+            return BaseResponse<string>.Success(changePeriodStatus);
         }
 
         public async Task<BaseResponse<string>> ChangeSchoolYearStatus(ChangePeriodStatusDto changeSchoolYearStatus)
         {
             var changePeriodStatus = await _administrationRepository.ChangeSchoolYearStatus(changeSchoolYearStatus);
-            return changePeriodStatus;
+            return BaseResponse<string>.Success(changePeriodStatus);
         }
 
         public async Task<BaseResponse<int>> CreatePeriod(CreatePeriodDto createPeriod)
         {
             var creatPeriodResult = await _administrationRepository.CreatePeriod(createPeriod);
-            return creatPeriodResult;
+            return BaseResponse<int>.Success(creatPeriodResult);
         }
 
         public async Task<BaseResponse<string>> DeletePeriod(int id)
         {
             var result = await _administrationRepository.DeletePeriod(id);
-            return result;
+            return BaseResponse<string>.Success(result);
         }
 
         public async Task<BaseResponse<List<UnsubmittedReport>>> GetUnsubmittedReports()
         {
             var result = await _administrationRepository.GetUnsubmittedReports();
-            return result;
+            return BaseResponse<List<UnsubmittedReport>>.Success(result);
         }
 
         public async Task<BaseResponse<string>> SendEmailToTeacherForUnsubmittedReport(int courseId)
         {
             var teacherEmail = await _teacherRepository.GetTeacherByCourse(courseId);
-            var sendEmail = _helperService.SendEmail(teacherEmail.Data.Email, teacherEmail.Data.FirstName, teacherEmail.Data.LastName, "Report");
+            var sendEmail = _helperService.SendEmail(teacherEmail.Email, teacherEmail.FirstName, teacherEmail.LastName, "Report");
 
             return sendEmail;
         }
@@ -209,9 +209,9 @@ namespace Master.Core.Services
         {
             var currentSchoolYear = await _helperService.GetCurrentActiveYearAndCategory();
             var allClassesForSchoolYear = await _administrationRepository.GetAllClassesForSchoolYear(currentSchoolYear.Data.CategoryId);
-            var allCousesForClasses = await _administrationRepository.GetAllCoursesForClasses(allClassesForSchoolYear.Data.ToList());
+            var allCousesForClasses = await _administrationRepository.GetAllCoursesForClasses(allClassesForSchoolYear.ToList());
 
-            return allCousesForClasses;
+            return BaseResponse<List<CoursesDto>>.Success(allCousesForClasses);
         }
 
         public async Task<BaseResponse<StatisticsDto>> GetStats()
@@ -228,12 +228,12 @@ namespace Master.Core.Services
 
             var response = new StatisticsDto
             {
-                TotalStudents = getTotalStudents.Data,
+                TotalStudents = getTotalStudents,
                 TotalClasses = getTotalClasses,
-                TotalTeachers = getTotalTeachers.Data,
+                TotalTeachers = getTotalTeachers,
                 CurrentYear = currentYear.Data.SchoolYear,
                 CurrentPeriod = currentPeriod.Data.name,
-                TotalSchoolYears = totalYears.Data,
+                TotalSchoolYears = totalYears,
                 UserDetails = userDetails.FirstName
             };
 

@@ -1,110 +1,110 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\",
+  "WorkspaceRootPath": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\data\\repositories\\administrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\administrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\encryptionkeygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\encryptionkeygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\services\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\services\\classesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\classesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\services\\administrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\administrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\services\\helpers\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\helpers\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\dto\\coursesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\dto\\coursesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\core\\mappers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\mappers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\data\\repositories\\classesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\classesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\data\\repositories\\reportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\reportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\data\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\data\\repositories\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\data\\repositories\\baseidentityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\baseidentityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\master\\master\\data\\repositories\\interfaces\\iteacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\interfaces\\iteacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\services\\classesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\classesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\services\\administrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\administrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\services\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\data\\repositories\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\data\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\data\\repositories\\classesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\classesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\data\\repositories\\interfaces\\iclassesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\interfaces\\iclassesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\data\\repositories\\administrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\administrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\data\\repositories\\interfaces\\iadministrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\interfaces\\iadministrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\administrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\encryptionkeygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\encryptionkeygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\dto\\coursesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\dto\\coursesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\core\\mappers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\core\\mappers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\data\\repositories\\reportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\reportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|c:\\users\\techcom\\desktop\\master\\backend\\master\\data\\repositories\\baseidentityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E11224B-83CD-4A2E-914D-1A27B5116170}|Master\\Master.csproj|solutionrelative:master\\data\\repositories\\baseidentityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,50 +134,167 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdministrationController.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\AdministrationController.cs",
-              "RelativeDocumentMoniker": "Master\\Controllers\\AdministrationController.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\AdministrationController.cs",
-              "RelativeToolTip": "Master\\Controllers\\AdministrationController.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAAAHsAAAAQAAAA",
+              "DocumentIndex": 4,
+              "Title": "TeacherService.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\TeacherService.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\Services\\TeacherService.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\TeacherService.cs",
+              "RelativeToolTip": "Master\\Core\\Services\\TeacherService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T11:54:29.471Z",
+              "WhenOpened": "2024-09-18T07:07:51.219Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "Master\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "Master\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAkAAAA",
+              "DocumentIndex": 6,
+              "Title": "TeacherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\TeacherRepository.cs",
+              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\TeacherRepository.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\TeacherRepository.cs",
+              "RelativeToolTip": "Master\\Data\\Repositories\\TeacherRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T20:32:42.128Z",
+              "WhenOpened": "2024-09-18T07:25:44.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AdministrationService.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\AdministrationService.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\Services\\AdministrationService.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\AdministrationService.cs",
+              "RelativeToolTip": "Master\\Core\\Services\\AdministrationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T10:02:03.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClassesService.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\ClassesService.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\Services\\ClassesService.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\ClassesService.cs",
+              "RelativeToolTip": "Master\\Core\\Services\\ClassesService.cs",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAIwNcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T07:09:54.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Master\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Master\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T20:32:49.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Program.cs",
+              "RelativeDocumentMoniker": "Master\\Program.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Program.cs",
+              "RelativeToolTip": "Master\\Program.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAAAHEAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T07:58:35.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\Services\\StudentService.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\StudentService.cs",
+              "RelativeToolTip": "Master\\Core\\Services\\StudentService.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAEwIUAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T10:07:52.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "Master\\Controllers\\TeacherController.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\TeacherController.cs",
+              "RelativeToolTip": "Master\\Controllers\\TeacherController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T08:15:45.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\StudentRepository.cs",
+              "RelativeToolTip": "Master\\Data\\Repositories\\StudentRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T20:18:38.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClassesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\ClassesRepository.cs",
+              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\ClassesRepository.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\ClassesRepository.cs",
+              "RelativeToolTip": "Master\\Data\\Repositories\\ClassesRepository.cs",
+              "ViewState": "AQIAAD8BAAAAAAAAAAAAAEoBAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T19:34:43.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IClassesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\Interfaces\\IClassesRepository.cs",
+              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\Interfaces\\IClassesRepository.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\Interfaces\\IClassesRepository.cs",
+              "RelativeToolTip": "Master\\Data\\Repositories\\Interfaces\\IClassesRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T08:00:00.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ClassesController.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\ClassesController.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\ClassesController.cs",
               "RelativeDocumentMoniker": "Master\\Controllers\\ClassesController.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\ClassesController.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\ClassesController.cs",
               "RelativeToolTip": "Master\\Controllers\\ClassesController.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAADgv1gAAAAQAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T08:22:53.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "ReportController.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\ReportController.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\ReportController.cs",
               "RelativeDocumentMoniker": "Master\\Controllers\\ReportController.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\ReportController.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\ReportController.cs",
               "RelativeToolTip": "Master\\Controllers\\ReportController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -186,289 +303,162 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Master\\Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Master\\Controllers\\StudentController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAPAAAA",
+              "DocumentIndex": 14,
+              "Title": "AdministrationController.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\AdministrationController.cs",
+              "RelativeDocumentMoniker": "Master\\Controllers\\AdministrationController.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\AdministrationController.cs",
+              "RelativeToolTip": "Master\\Controllers\\AdministrationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T20:32:49.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TeacherController.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\TeacherController.cs",
-              "RelativeDocumentMoniker": "Master\\Controllers\\TeacherController.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\TeacherController.cs",
-              "RelativeToolTip": "Master\\Controllers\\TeacherController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T07:09:54.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdministrationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\AdministrationRepository.cs",
-              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\AdministrationRepository.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\AdministrationRepository.cs",
-              "RelativeToolTip": "Master\\Data\\Repositories\\AdministrationRepository.cs",
-              "ViewState": "AQIAAJsBAAAAAAAAAAAAACECAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T19:23:13.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EncryptionKeyGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\EncryptionKeyGenerator.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\EncryptionKeyGenerator.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\EncryptionKeyGenerator.cs",
-              "RelativeToolTip": "Master\\Core\\EncryptionKeyGenerator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T09:24:00.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EncryptionHelper.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\EncryptionHelper.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\EncryptionHelper.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\EncryptionHelper.cs",
-              "RelativeToolTip": "Master\\Core\\EncryptionHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T09:24:01.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TeacherService.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\TeacherService.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\Services\\TeacherService.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\TeacherService.cs",
-              "RelativeToolTip": "Master\\Core\\Services\\TeacherService.cs",
-              "ViewState": "AQIAAJ0AAAAAAAAAAAAAAJYAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T07:07:51.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ReportService.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\ReportService.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\Services\\ReportService.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\ReportService.cs",
-              "RelativeToolTip": "Master\\Core\\Services\\ReportService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T07:07:20.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StudentService.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\StudentService.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\Services\\StudentService.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\StudentService.cs",
-              "RelativeToolTip": "Master\\Core\\Services\\StudentService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T10:07:52.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T11:54:29.471Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ClassesService.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\ClassesService.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\Services\\ClassesService.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\ClassesService.cs",
-              "RelativeToolTip": "Master\\Core\\Services\\ClassesService.cs",
-              "ViewState": "AQIAAPMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "AdministrationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\AdministrationRepository.cs",
+              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\AdministrationRepository.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\AdministrationRepository.cs",
+              "RelativeToolTip": "Master\\Data\\Repositories\\AdministrationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T07:09:54.49Z",
+              "WhenOpened": "2024-10-03T14:08:56.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\Services\\AuthenticationService.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\AuthenticationService.cs",
-              "RelativeToolTip": "Master\\Core\\Services\\AuthenticationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
+              "Title": "IAdministrationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\Interfaces\\IAdministrationRepository.cs",
+              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\Interfaces\\IAdministrationRepository.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\Interfaces\\IAdministrationRepository.cs",
+              "RelativeToolTip": "Master\\Data\\Repositories\\Interfaces\\IAdministrationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T10:03:03.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AdministrationService.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\AdministrationService.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\Services\\AdministrationService.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\AdministrationService.cs",
-              "RelativeToolTip": "Master\\Core\\Services\\AdministrationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T10:02:03.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "HelperService.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\Helpers\\HelperService.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\Services\\Helpers\\HelperService.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Services\\Helpers\\HelperService.cs",
-              "RelativeToolTip": "Master\\Core\\Services\\Helpers\\HelperService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwNIAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T10:05:24.203Z",
+              "WhenOpened": "2024-10-04T07:31:32.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "CoursesDto.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\DTO\\CoursesDto.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\DTO\\CoursesDto.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\DTO\\CoursesDto.cs",
-              "RelativeToolTip": "Master\\Core\\DTO\\CoursesDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Master\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Master\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T10:05:13.32Z",
+              "WhenOpened": "2024-09-28T20:32:42.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "Master\\Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "Master\\Controllers\\BaseController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "EncryptionKeyGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\EncryptionKeyGenerator.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\EncryptionKeyGenerator.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\EncryptionKeyGenerator.cs",
+              "RelativeToolTip": "Master\\Core\\EncryptionKeyGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T20:32:44.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T09:24:00.951Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Mappers\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Master\\Core\\Mappers\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Core\\Mappers\\MappingProfile.cs",
-              "RelativeToolTip": "Master\\Core\\Mappers\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAACAAAAA",
+              "Title": "EncryptionHelper.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\EncryptionHelper.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\EncryptionHelper.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\EncryptionHelper.cs",
+              "RelativeToolTip": "Master\\Core\\EncryptionHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T09:58:38.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T09:24:01.795Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "ClassesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\ClassesRepository.cs",
-              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\ClassesRepository.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\ClassesRepository.cs",
-              "RelativeToolTip": "Master\\Data\\Repositories\\ClassesRepository.cs",
-              "ViewState": "AQIAAEEBAAAAAAAAAAAAAE4BAAAAAAAA",
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\ReportService.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\Services\\ReportService.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\ReportService.cs",
+              "RelativeToolTip": "Master\\Core\\Services\\ReportService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T19:34:43.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T07:07:20.597Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "ReportRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\ReportRepository.cs",
-              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\ReportRepository.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\ReportRepository.cs",
-              "RelativeToolTip": "Master\\Data\\Repositories\\ReportRepository.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAADsAAAAJAAAA",
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\Services\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Services\\AuthenticationService.cs",
+              "RelativeToolTip": "Master\\Core\\Services\\AuthenticationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T20:16:25.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T10:03:03.153Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "StudentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\StudentRepository.cs",
-              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\StudentRepository.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\StudentRepository.cs",
-              "RelativeToolTip": "Master\\Data\\Repositories\\StudentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAANAAAA",
+              "Title": "CoursesDto.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\DTO\\CoursesDto.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\DTO\\CoursesDto.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\DTO\\CoursesDto.cs",
+              "RelativeToolTip": "Master\\Core\\DTO\\CoursesDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T20:18:38.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T10:05:13.32Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "TeacherRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\TeacherRepository.cs",
-              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\TeacherRepository.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\TeacherRepository.cs",
-              "RelativeToolTip": "Master\\Data\\Repositories\\TeacherRepository.cs",
-              "ViewState": "AQIAADsBAAAAAAAAAAAAAD4BAAAAAAAA",
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "Master\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "Master\\Controllers\\BaseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T07:25:44.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T20:32:44.325Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "BaseIdentityRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\BaseIdentityRepository.cs",
-              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\BaseIdentityRepository.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\BaseIdentityRepository.cs",
-              "RelativeToolTip": "Master\\Data\\Repositories\\BaseIdentityRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAIAAAA",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Mappers\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Master\\Core\\Mappers\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Core\\Mappers\\MappingProfile.cs",
+              "RelativeToolTip": "Master\\Core\\Mappers\\MappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAACAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T20:11:30.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T09:58:38.355Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Program.cs",
-              "RelativeDocumentMoniker": "Master\\Program.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Program.cs",
-              "RelativeToolTip": "Master\\Program.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAIBJwF4AAAAHAAAA",
+              "Title": "ReportRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\ReportRepository.cs",
+              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\ReportRepository.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\ReportRepository.cs",
+              "RelativeToolTip": "Master\\Data\\Repositories\\ReportRepository.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAADsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T07:58:35.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T20:16:25.292Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "ITeacherRepository.cs",
-              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\Interfaces\\ITeacherRepository.cs",
-              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\Interfaces\\ITeacherRepository.cs",
-              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Master\\Master\\Data\\Repositories\\Interfaces\\ITeacherRepository.cs",
-              "RelativeToolTip": "Master\\Data\\Repositories\\Interfaces\\ITeacherRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAABTAAAA",
+              "Title": "BaseIdentityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\BaseIdentityRepository.cs",
+              "RelativeDocumentMoniker": "Master\\Data\\Repositories\\BaseIdentityRepository.cs",
+              "ToolTip": "C:\\Users\\TECHCOM\\Desktop\\master\\Backend\\Master\\Data\\Repositories\\BaseIdentityRepository.cs",
+              "RelativeToolTip": "Master\\Data\\Repositories\\BaseIdentityRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T07:26:00.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T20:11:30.268Z"
             }
           ]
         }
